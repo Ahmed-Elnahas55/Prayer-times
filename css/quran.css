@@ -1,0 +1,237 @@
+/* Globle Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to bottom, #f0f9f4, #e6f4ea);
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  min-height: 100vh;
+  padding-bottom: 40px;
+  transition: background 0.4s;
+}
+body.dark {
+  background: linear-gradient(to bottom, #1f2937, #111827);
+  color: #e5e7eb;
+}
+.ayah-number {
+  color: #059669;
+  font-weight: bold;
+  font-size: 20px;             
+}
+#surah-text {
+  line-height: 2.5;       
+  font-size: 22px;  
+  direction: rtl;       
+  text-align: justify;
+}
+/* ====================== Navbar ====================== */
+.navbar {
+  background: white;
+  color: #059669;
+  padding: 12px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.nav-logo i {
+  font-size: 2rem;
+  color: #059669;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.nav-icons {
+  display: flex;
+  gap: 25px;
+}
+.nav-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #059669;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+}
+.nav-icon:hover {
+  color: #059669;
+  transform: translateY(-3px);
+}
+.nav-icon i {
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+/* زرار الـ Dark Mode */
+.theme-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #059669;
+  font-size: 1.55rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.theme-btn:hover {
+  background: #059668aa;
+  color: white;
+  transform: scale(1.1);
+}
+body.dark .nav-icon:hover {
+  color: #059669;
+  transform: translateY(-3px);
+}
+body.dark .nav-icon,
+body.dark .navbar {
+  color: white;
+}
+body.dark .navbar{
+  background: #1e2937;
+}
+body.dark .theme-btn {
+  background: transparent;
+  color: white;
+}
+body.dark .theme-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #059669;
+}
+/* Responsive mobile */
+@media (max-width: 767px) {
+  .nav-logo span{
+    display: none;
+  }
+}
+/* ====================== quran Page Style ====================== */
+.quran-page {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+.quran-header {
+  text-align: center;
+  color: #10b981;
+  margin-bottom: 30px;
+  font-size: 2.4rem;
+}
+.search-box {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1.15rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+body.dark .search-box {
+  background: #1f2937;
+  border-color: #475569;
+  color: white;
+}
+/* Grid للسور - Cards جنب بعضها */
+.surah-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.surah {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+body.dark .surah {
+  background: #1f2937;
+}
+.surah:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(16, 185, 129, 0.25);
+}
+.surah h3 {
+  font-size: 1.45rem;
+  margin-bottom: 8px;
+  color: #1e3a8a;
+}
+body.dark .surah h3 {
+  color: #93c5fd;
+}
+.surah small {
+  color: #64748b;
+  font-size: 1rem;
+}
+body.dark .surah small {
+  color: #cbd5e1;
+}
+/* View All Surah*/
+.surah-view {
+  display: none;
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  margin-top: 20px;
+}
+body.dark .surah-view {
+  background: #1f2937;
+}
+.back-button {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  font-size: 1.05rem;
+}
+.surah-view h2 {
+  text-align: center;
+  color: #10b981;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+.basmala {
+  text-align: center;
+  font-size: 2.1rem;
+  color: #10b981;
+  margin: 35px 0 40px;
+  font-weight: 500;
+}
+.surah-text {
+  line-height: 3;
+  font-size: 1.45rem;
+  text-align: justify;
+  color: #1f2937;
+}
+body.dark .surah-text {
+  color: #e5e7eb;
+}

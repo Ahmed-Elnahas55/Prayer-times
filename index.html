@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>مواقيت الصلاة 🕌</title>
+    <title>🕌 مواقيت الصلاة - مصر</title>
     <!-- icon page -->
-     <link rel="icon" href="image/icon.png">
+    <link rel="icon" href="image/icon.png" />
     <!-- link Css -->
     <link rel="stylesheet" href="css/style.css" />
     <link
@@ -14,14 +14,38 @@
     />
   </head>
   <body>
-    <!-- Btn Dark/Light -->
-    <div class="theme-toggle">
-      <button onclick="toggleTheme()" id="themeBtn">
-        <i class="fas fa-moon"></i>
-      </button>
-    </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <i class="fas fa-mosque"></i>
+          <span>مواقيت الصلاة</span>
+        </div>
+        <div class="nav-right">
+          <div class="nav-icons">
+            <a href="quran.html" class="nav-icon" title="القرآن الكريم">
+              <i class="fas fa-book-quran"></i>
+              <span>القرآن</span>
+            </a>
+            <a href="#" class="nav-icon" title="الصوتيات والأذان">
+              <i class="fas fa-volume-up"></i>
+              <span>صوتيات</span>
+            </a>
+          </div>
+          <!-- زرار الـ Dark Mode -->
+          <button
+            onclick="toggleTheme()"
+            id="themeBtn"
+            class="theme-btn"
+            title="تبديل الوضع">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Header section -->
     <div class="header">
-      <img src="image/logo.png" loading="lazy" class="Logo">
+      <img src="image/logo.png" loading="lazy" class="Logo" />
       <h1>مواقيت الصلاة في مصر</h1>
     </div>
     <div class="container">
@@ -52,7 +76,7 @@
       <!-- Footer -->
       <p class="footer-text">
         خلّي التبويب مفتوح أو ثبت الموقع على الشاشة الرئيسية عشان الأذان يشتغل
-        <br>
+        <br />
         By Ahmed Elnahas &copy;
       </p>
     </div>

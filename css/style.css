@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background: linear-gradient(to bottom, #f0f9f4, #e6f4ea);
   font-family:
@@ -15,10 +14,109 @@ body {
   padding-bottom: 40px;
   transition: background 0.4s;
 }
-
 body.dark {
   background: linear-gradient(to bottom, #1f2937, #111827);
   color: #e5e7eb;
+}
+/* ====================== Navbar ====================== */
+.navbar {
+  background: white;
+  color: #059669;
+  padding: 12px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.nav-logo i {
+  font-size: 2rem;
+  color: #059669;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.nav-icons {
+  display: flex;
+  gap: 25px;
+}
+.nav-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #059669;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+}
+.nav-icon:hover {
+  color: #059669;
+  transform: translateY(-3px);
+}
+.nav-icon i {
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+/* زرار الـ Dark Mode */
+.theme-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #059669;
+  font-size: 1.55rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.theme-btn:hover {
+  background: #059668aa;
+  color: white;
+  transform: scale(1.1);
+}
+body.dark .nav-icon:hover {
+  color: #059669;
+  transform: translateY(-3px);
+}
+body.dark .nav-icon,
+body.dark .navbar {
+  color: white;
+}
+body.dark .navbar{
+  background: #1e2937;
+}
+body.dark .theme-btn {
+  background: transparent;
+  color: white;
+}
+body.dark .theme-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #059669;
+}
+/* Responsive mobile */
+@media (max-width: 767px) {
+  .nav-logo span{
+    display: none;
+  }
 }
 /* header Styling */
 .header {

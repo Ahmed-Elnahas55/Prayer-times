@@ -19,7 +19,7 @@ const governorates = [
 ];
 
 let currentPrayerTimes = null;
-let audio = new Audio("https://praytimes.org/audio/sunni/Adhan-Egypt.mp3"); // صوت أذان مصري جميل
+let audio = new Audio("https://praytimes.org/audio/sunni/Adhan-Egypt.mp3");
 let notificationEnabled = false;
 let prayerTimeout = null;
 
@@ -70,7 +70,6 @@ function toggleTheme() {
   }
 }
 
-
 async function loadPrayerTimes(city) {
   try {
     const res = await fetch(
@@ -84,16 +83,16 @@ async function loadPrayerTimes(city) {
 
     // تحويل الشهر الهجري إلى عربي
     const hijriMonthsArabic = {
-      Muharram: "محرم",
-      Safar: "صفر",
+      "Muharram": "محرم",
+      "Safar": "صفر",
       "Rabi' al-awwal": "ربيع الأول",
       "Rabi' al-thani": "ربيع الآخر",
       "Jumada al-awwal": "جمادى الأولى",
       "Jumada al-thani": "جمادى الآخرة",
-      Rajab: "رجب",
+      "Rajab": "رجب",
       "Sha'ban": "شعبان",
-      Ramadan: "رمضان",
-      Shawwal: "شوال",
+      "Ramadan": "رمضان",
+      "Shawwal": "شوال",
       "Dhu al-Qi'dah": "ذو القعدة",
       "Dhu al-Hijjah": "ذو الحجة",
     };
@@ -191,7 +190,7 @@ function calculateNextPrayer() {
   nextNameTime.textContent = `${nextPrayer.name} - ${nextPrayer.time}`;
   remainingEl.textContent = `متبقي: ${hoursLeft} ساعة و ${minutesLeft} دقيقة`;
   nextPrayerDiv.classList.remove("hidden");
-
+  // صوت الاذان  //
   if (prayerTimeout) clearTimeout(prayerTimeout);
 
   prayerTimeout = setTimeout(() => {

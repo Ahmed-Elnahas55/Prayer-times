@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>القرآن الكريم</title>
+  <!-- icon page -->
+  <link rel="icon" href="image/icon.png" />
+  <!-- link Css -->
+  <link rel="stylesheet" href="css/quran.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+   <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <i class="fas fa-book-quran"></i>
+          <span>القرآن الكريم</span>
+        </div>
+          <!-- زرار الـ Dark Mode -->
+          <button
+            onclick="toggleTheme()"
+            id="themeBtn"
+            class="theme-btn"
+            title="تبديل الوضع">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  <div class="quran-page">
+    <h1 class="quran-header">القرآن الكريم</h1>
+
+    <input type="text" id="searchInput" placeholder="ابحث عن اسم السورة..." class="search-box">
+
+    <!-- قائمة السور - Cards جنب بعضها -->
+    <div id="surahs-list" class="surah-grid"></div>
+
+    <!-- عرض السورة الكامل -->
+    <div id="surah-view" class="surah-view">
+      <button onclick="goBack()" class="back-button">
+        ← العودة لقائمة السور
+      </button>
+      <h2 id="surah-title"></h2>
+      <div class="basmala">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+      <div id="surah-text" class="surah-text"></div>
+    </div>
+  </div>
+
+  <script src="quran.js"></script>
+</body>
+</html>
