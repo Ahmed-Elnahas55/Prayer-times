@@ -170,7 +170,7 @@ body.dark .search-box {
   transition: all 0.3s;
 }
 body.dark .surah {
-  background: #1f2937;
+  background: #29374a;
 }
 .surah:hover {
   transform: translateY(-8px);
@@ -179,10 +179,10 @@ body.dark .surah {
 .surah h3 {
   font-size: 1.45rem;
   margin-bottom: 8px;
-  color: #1e3a8a;
+  color: #059669;
 }
 body.dark .surah h3 {
-  color: #93c5fd;
+  color: white;
 }
 .surah small {
   color: #64748b;
