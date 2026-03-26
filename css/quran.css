@@ -63,27 +63,6 @@ body.dark {
   align-items: center;
   gap: 25px;
 }
-.nav-icons {
-  display: flex;
-  gap: 25px;
-}
-.nav-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #059669;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: all 0.3s;
-}
-.nav-icon:hover {
-  color: #059669;
-  transform: translateY(-3px);
-}
-.nav-icon i {
-  font-size: 1.6rem;
-  margin-bottom: 4px;
-}
 /* زرار الـ Dark Mode */
 .theme-btn {
   background: rgba(255, 255, 255, 0.15);
@@ -234,4 +213,14 @@ body.dark .surah-view {
 }
 body.dark .surah-text {
   color: #e5e7eb;
+}
+/* footer Styling */
+.footer-text {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 30px;
+  font-size: 0.95rem;
+}
+body.dark .footer-text {
+  color: #9ca3af;
 }
