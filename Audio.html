@@ -1,27 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🕌 مواقيت الصلاة - مصر</title>
-    <!-- icon page -->
-    <link rel="icon" href="image/icon.png" />
-    <!-- link Css -->
-    <link rel="stylesheet" href="css/Audio.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <!-- Navbar -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>القرآن الكريم - استماع</title>
+  <link rel="stylesheet" href="css/Audio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
     <nav class="navbar">
       <div class="nav-container">
         <div class="nav-logo">
-          <a href="index.html"><i class="fas fa-volume-up"></i></a>
-          <span>صوتيات</span>
+          <a href="index.html"><i class="fas fa-book-quran"></i></a>
+          <span>القرآن الكريم</span>
         </div>
-        <div class="nav-right">
           <!-- زرار الـ Dark Mode -->
           <button
             onclick="toggleTheme()"
@@ -33,7 +26,35 @@
         </div>
       </div>
     </nav>
-    <h1>انتظرونا...قريباً</h1>
-    <script src="js/Audio.js"></script>
-  </body>
+  <div class="quran-page">
+    <h1 class="quran-header">استماع إلى القرآن</h1>
+    <!-- اختيار القارئ -->
+    <div class="reciter-box">
+      <label>اختر القارئ:</label>
+      <select id="reciterSelect"></select>
+    </div>
+    <!-- قائمة السور -->
+    <div id="surahs-list" class="surah-grid" style="display: none;"></div>
+    <!-- مشغل السورة -->
+    <div id="surah-view" class="surah-view" style="display: none;">
+      <button onclick="goBack()" class="back-button">
+        ← العودة لقائمة السور
+      </button>
+      <h2 id="surah-title"></h2>
+      
+      <div class="audio-player">
+        <audio id="quranAudio" controls style="width:100%; margin: 20px 0;"></audio>
+      </div>
+      
+      <div id="surah-text" class="surah-text"></div>
+    </div>
+  </div>
+    <!-- Footer -->
+    <p class="footer-text">
+      خلّي التبويب مفتوح أو ثبت الموقع على الشاشة الرئيسية عشان الأذان يشتغل
+      <br />
+      By Ahmed Elnahas &copy;
+    </p>
+  <script src="js/Audio.js"></script>
+</body>
 </html>
